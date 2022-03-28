@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @foreach (var item in Model.People)
+    {
+        <p>@Html.DisplayFor(modelItem => item.FirstName)
+        @Html.DisplayFor(modelItem => item.LastName)</p>
+    }
+
+</div>
